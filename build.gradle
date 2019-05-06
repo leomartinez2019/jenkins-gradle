@@ -1,0 +1,23 @@
+/*
+ * Trying CI/CD with Gradle and Jenkins
+ *
+ */
+
+task inicio {
+    doLast {
+        println 'Iniciando tarea...'
+    }
+}
+
+task tareas {
+    dependsOn inicio
+    doLast {
+        println "Completando tareas"
+    }
+}
+
+task fin {
+    doLast {
+        println 'Finalizando tareas'
+    }
+}
